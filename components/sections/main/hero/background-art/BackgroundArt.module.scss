@@ -1,0 +1,68 @@
+@use '../../../../../styles/mixins' as *;
+
+.backgroundArt {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  @include standardWidth;
+
+  @include respond(laptop) {
+    width: 50%;
+  }
+
+  & .code {
+    position: relative;
+    font-size: var(--fs-300);
+    color: hsl(var(--color-link-primary) / 0.2);
+    overflow: hidden;
+    text-align: center;
+    @include standardWidth;
+  }
+
+  & .image {
+    position: absolute;
+    height: 100dvh;
+    max-height: 16em;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    z-index: 2;
+
+    & img {
+      position: absolute;
+      place-self: center;
+      width: 50%;
+      height: auto;
+      max-width: 16em;
+      padding: 0.5em;
+      object-fit: contain;
+      border-radius: 50% 20% 50% 20%;
+      transform: rotate(-9deg);
+      background-color: hsl(var(--color-highlight-active) / 0.75);
+      z-index: 2;
+    }
+  }
+
+  svg:nth-of-type(1) {
+    place-self: center;
+    position: absolute;
+    height: 21em;
+    width: 21em;
+    z-index: 1;
+    & path {
+      fill: hsl(var(--color-highlight-primary) / 0.5);
+    }
+  }
+
+  svg:nth-of-type(2) {
+    place-self: center;
+    position: absolute;
+    height: 25em;
+    width: 25em;
+    & path {
+      fill: hsl(var(--color-highlight-highlight) / 0.75);
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@mixin gradientText($fontSize, $fontFamily, $fontWeight) {
+  font-size: $fontSize;
+  font-family: $fontFamily;
+  font-weight: $fontWeight;
+  letter-spacing: 1px;
+  background: var(--gradient-primary);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

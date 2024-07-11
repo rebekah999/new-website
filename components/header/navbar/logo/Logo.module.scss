@@ -1,0 +1,18 @@
+@use '../../../../styles/mixins' as *;
+
+.logo {
+    line-height: 1.5;
+    z-index: 2000;
+    transition: var(--transition-main);
+    @include gradientText(var(--fs-600), var(--font-heading), 900);
+
+    &:hover, &:focus {
+        transform: scale(1.05);
+    }
+
+    @include respond(tab) {
+        width: 25%;
+    }
+
+}
+

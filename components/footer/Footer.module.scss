@@ -1,0 +1,21 @@
+@use '../../styles/mixins' as *;
+
+.footer {
+    height: 100%;
+    padding: var(--spacing-large) 0;
+    display: grid;
+    place-content: center;
+    gap: 1rem;
+    font-size: var(--fs-300);
+    text-align: center;
+    @include standardWidth;
+
+    & a{
+        color: hsl(var(--color-link-primary));
+        font-weight: 700;
+
+        &:hover, &:focus {
+            color: hsl(var(--color-link-highlight));
+        }
+    }
+}

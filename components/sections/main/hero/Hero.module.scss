@@ -1,0 +1,34 @@
+@use '../../../../styles/mixins' as *;
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include standardWidth;
+
+    @include respond(tab) {
+        padding-top: var(--spacing-large);
+    }
+
+    @include respond(laptop) {
+        flex-direction: row;
+    }
+
+    div:nth-child(1) {
+        width: 60%;
+    }
+    
+    h1, h2 {
+        text-align: center;
+    }
+
+    h2 {
+        margin-bottom: var(--spacing-medium);
+        font-family: var(--font-heading);
+        font-size: var(--fs-700);
+        line-height: 1;
+    }
+
+}

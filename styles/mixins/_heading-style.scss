@@ -1,0 +1,10 @@
+@mixin headingStyles($fontSize, $fontFamily, $fontWeight, $textAlign: left, $textTransform: none, $marginTop: 0, $marginBottom: 0, $lineHeight: 1.25) {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+  text-align: $textAlign;
+  text-transform: $textTransform;
+  margin-top: $marginTop;
+  margin-bottom: $marginBottom;
+}

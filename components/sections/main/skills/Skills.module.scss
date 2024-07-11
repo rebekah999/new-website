@@ -1,0 +1,39 @@
+@use '../../../../styles/mixins' as *;
+
+.skills {
+    @include commonSection(var(--spacing-large), var(--spacing-large), column, center, center, var(--spacing-medium), center);
+
+  & div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-medium);
+    align-items: center;
+    
+    & div {
+      & a {
+        padding: 0.5em 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--spacing-small);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: var(--border-radius-small);
+        box-shadow: var(--box-shadow-light);
+        transition: var(--transition-main);
+
+      
+          &:hover,
+          &:focus {
+            box-shadow: var(--box-shadow-hover);
+          }
+    
+          &:active {
+            box-shadow: var(--box-shadow-active);
+          }
+        
+      }
+    }
+
+  }
+}

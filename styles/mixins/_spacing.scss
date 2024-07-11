@@ -1,0 +1,10 @@
+@use './breakpoints' as *;
+
+@mixin standardWidth {
+    width: calc(100dvw - 4rem);
+    margin: 0 auto;
+
+    @include respond(laptop) {
+        max-width: 80rem;
+    }
+}

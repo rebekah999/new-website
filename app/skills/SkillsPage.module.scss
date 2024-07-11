@@ -1,0 +1,44 @@
+@use '../../styles/mixins' as *;
+
+.skillsPage {
+  padding: var(--spacing-large) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-medium);
+  @include standardWidth;
+
+  & ul {
+    display: grid;
+    gap: var(--spacing-medium);
+
+    & li {
+      border-bottom: 1px solid hsl(var(--color-text) / 0.5);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      gap: var(--spacing-small);
+      justify-content: center;
+      padding: 0.75rem 0;
+
+      & svg {
+        height: 4em;
+        width: 4em;
+
+        @include respond(laptop) {
+          height: 5em;
+          width: 5em;
+        }
+      }
+
+      & h3 {
+        justify-self: flex-end;
+      }
+
+      & p {
+        grid-column: 1 / span 2;
+      }
+    }
+  }
+}

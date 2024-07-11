@@ -1,0 +1,6 @@
+@use '../../../styles/mixins' as *;
+
+.mainHeading {
+     @include headingStyles(var(--fs-900), var(--font-heading), 900, center, uppercase, 0.5rem, 0.5rem);
+    @include gradientText(var(--fs-900), var(--font-heading), 900);
+}

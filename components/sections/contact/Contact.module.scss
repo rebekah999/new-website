@@ -1,0 +1,24 @@
+@use '../../../styles/mixins' as *;
+
+.contact {
+  @include commonSection(
+    var(--spacing-large),
+    var(--spacing-large),
+    column,
+    center,
+    center,
+    var(--spacing-medium)
+  );
+
+  & div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-medium);
+
+    & a {
+      font-size: var(--fs-500);
+    }
+  }
+}
